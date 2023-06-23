@@ -1,0 +1,247 @@
+/*-----FONTS-----*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap') ;
+
+h1 {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 50px;
+	color: #FFFFFF;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+h6,a {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	color: #E0E0E0;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+a:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+
+
+/*-----AREA-----*/
+
+html,body {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	background-color: #000000;
+	top: 0;
+	left: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+.titre {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+.bloc {
+	display: flex;
+	justify-content: center;
+	margin-top: auto;
+	margin-bottom: auto;
+	background-color: #121212;
+	border-radius: 20px;
+	width: 50%;
+	height: 600px;
+}
+
+.contenu {
+	margin-top: auto;
+	margin-bottom: auto;
+	width: 364px;
+	height: 505px;
+}
+
+.traitjaune {
+	width: 90px;
+	height: 0px;
+	border: 1px solid #23D563;
+	margin: 0 auto;
+}
+
+.groupe {
+  position: relative;
+	width: 363px;
+  margin-top: 45px;
+  margin-bottom: 15px;
+}
+
+.revelateur-mdp {
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	left: 335px;
+	top: 7px;
+}
+
+.dessous-mdp {
+	display: flex;
+	margin-bottom: 100px;
+	justify-content: space-between;
+}
+
+.rester-connecte {
+	display: flex;
+}
+
+.case-a-cocher {
+	top: 2px;
+	width: 17px;
+	height: 17px;
+	margin-top: 2px;
+	margin-right: 7px;
+}
+
+/*-----BUTTON-----*/
+
+input[type="submit"] {
+	width: 100%;
+	height: 70px;
+  background: #23D563;
+  border-radius: 60px;
+  cursor : pointer;
+  
+  font-family: 'Poppins';
+  color: #000000;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 40px;
+}
+
+input[type="submit"]:hover{
+  border: 3px solid #00FF00;
+}
+
+
+/*-----INPUTS-----*/
+
+input[type="text"],
+input[type="password"]{
+	font-family: 'Poppins';
+  background: none;
+  color: #FFFFFF;
+  font-size: 24px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #E4E4E4;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus{
+	outline: none;
+}
+
+input[type="text"]:focus ~ .barre:before,
+input[type="password"]:focus ~ .barre:before {
+   width: 101%;
+}
+
+.barre {
+  width: 100%;
+}
+
+.barre:before {
+	position: absolute;
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 0px;
+  background: #E4E4E4;
+  transition: 450ms ease all;
+}
+
+
+/*-----CUSTOM CHECKBOX-----*/
+
+.noncoche {
+  position: absolute;
+  width:17px;
+  height:17px;
+  cursor : pointer;
+  transition: 50ms ease all;
+  background-image: url("/src/Site/image/tick-square.svg");
+}
+
+.coche {
+  position: absolute;
+  width:17px;
+  height:17px;
+  cursor : pointer;
+  transition: 50ms ease all;
+  background-image: url("/src/Site/image/tick-square-check.svg");
+}
+
+
+/*-----CUSTOM REVEAL PASSWORD-----*/
+
+::-ms-reveal {
+	display: none;
+}
+
+.oeil-ferme {
+	position: absolute;
+  width:24px;
+  height:24px;
+  cursor : pointer;
+  transition: 200ms ease all;
+  background-image: url("/src/Site/image/eye-slash.svg");
+}
+
+.oeil-ouvert {
+	position: absolute;
+  width:24px;
+  height:24px;
+  cursor : pointer;
+  transition: 200ms ease all;
+  background-image: url("/src/Site/image/eye.svg");
+}
+
+
+/*-----RESPONSIVE------*/
+
+
+@media screen and (max-height: 530px) {
+	body {
+		display: flex;
+		justify-content: center;
+	}
+
+	.bloc {
+		background-color: #000000;
+	}
+
+	.titre {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.bloc {
+		background-color: #000000;
+	}
+}
+
+/* Message d'erreur */
+
+.erreurConnexion {
+	display: flex;
+	justify-content: center;
+	color: red;
+}
